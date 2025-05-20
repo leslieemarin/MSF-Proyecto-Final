@@ -26,7 +26,7 @@ x0,t0,tend,dt,w,h = 0,0,20,1E-3,6,3
 N = round((tend-t0)/dt) + 1 #veces de solucion numerica, numeros enteros
 t = np.linspace(t0,tend,N) #linea de tiempo de 0,10
 u1 = np.where(t >= 0, 1.0, 0.0) # Escalón unitario
-u2= np.where((t >= 0) & (t <= 4), 1.0, 0.0)  # Pulso de 2 a 4 segundos
+u2= np.where((t >= 0) & (t <= 2), 1.0, 0.0)  # Pulso de 0 a 2 segundos
 
 #arreglo de todas las señales
 u = np.stack((u1,u2), axis=1) 
